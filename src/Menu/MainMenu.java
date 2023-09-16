@@ -12,9 +12,9 @@ public class MainMenu {
         while (true) {
             System.out.println("\nCryptanalyzer Main Menu\n");
             System.out.print("1. Encryption. \n");
-            System.out.print("2. Decrypting (Key). \n");
-            System.out.print("3. Decrypting (Brute Force). \n");
-            System.out.print("4. Decrypting (Statistical Analysis). \n");
+            System.out.print("2. Decryption (Key). \n");
+            System.out.print("3. Decryption (Brute Force). \n");
+            System.out.print("4. Decryption (Statistical Analysis). \n");
             System.out.print("0. Exit. \n");
 
             choice = inputValidator.validateChoice(inputScanner);
