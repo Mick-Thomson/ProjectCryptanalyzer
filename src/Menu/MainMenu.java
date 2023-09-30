@@ -1,7 +1,9 @@
 package Menu;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import static Operations.DecryptionKey.decrypt;
+import static Operations.Encryption.encrypt;
 
 public class MainMenu {
     public static void main(String[] args) {
@@ -23,9 +25,11 @@ public class MainMenu {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Encryption");
+                    encrypt();
                 }
                 case 2 -> {
                     System.out.println("Decrypting text using a key");
+                    decrypt();
                 }
                 case 3 -> {
                     System.out.println("Decrypting text using brute force");
