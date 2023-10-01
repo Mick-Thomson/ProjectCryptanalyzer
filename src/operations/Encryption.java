@@ -1,7 +1,7 @@
-package Operations;
+package operations;
 
-import Files.Constants;
-import Files.FileOperations;
+import files.Constants;
+import files.FileOperations;
 import java.util.Scanner;
 
 public class Encryption {

@@ -1,9 +1,10 @@
-package Menu;
+package menu;
 
 import java.util.Scanner;
 
-import static Operations.DecryptionKey.decrypt;
-import static Operations.Encryption.encrypt;
+import static operations.DecryptionBruteForce.decryptBF;
+import static operations.DecryptionKey.decrypt;
+import static operations.Encryption.encrypt;
 
 public class MainMenu {
     public static void main(String[] args) {
@@ -33,6 +34,7 @@ public class MainMenu {
                 }
                 case 3 -> {
                     System.out.println("Decrypting text using brute force");
+                    decryptBF();
                 }
                 case 4 -> {
                     System.out.println("Decrypting using statistical text analysis");
