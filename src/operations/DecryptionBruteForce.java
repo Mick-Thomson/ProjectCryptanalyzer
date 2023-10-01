@@ -36,7 +36,6 @@ public class DecryptionBruteForce {
     public static void decryptBF() {
         System.out.println("Введите текст, который хотите расшифровать: ");
         Scanner scan = new Scanner(System.in);
-//        String encryptionText = scan.nextLine();
         char[] encryptedText = scan.nextLine().toCharArray();
         List<String> listDecryptionTexts = getAllTypesDecryptedTexts(encryptedText);
         String decryptedText = AnalyzeText.analyzeText(listDecryptionTexts, Constants.FILE_LIST_ENGLISH_WORDS);

@@ -54,7 +54,7 @@ public class Encryption {
     public static void encrypt() {
         System.out.println("Введите текст, который хотите зашифровать: ");
         writeOriginalTextInFile();
-        System.out.println("Введите ключ от 1 до 36: ");
+        System.out.println("\nВведите ключ от 1 до 36: ");
         generateKey();
         char[] defaultTextSymbols = defaultText.toLowerCase().toCharArray();
         encryptedText = new String(encryption(defaultTextSymbols, key));   // Зашифровывание

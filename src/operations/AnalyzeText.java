@@ -17,22 +17,24 @@ public class AnalyzeText {
         int hitCounter = 0;
         StringTokenizer stringTokenizer;
         FileOperations readFile = new FileOperations();
-        readFile.readFromFile(fileVerificationSource);
-        for (String line : list) {
-            int countWords = separateWords(line);
+        readFile.readFromFile(fileVerificationSource);  // Читаем из проверочного файла
+        for (String line : list) {  // Проходимся по списку всех расшифровок построчно
+            int countWords = separateWords(line);   // Возвращаем количество слов в каждой строке разделённое на 3
             stringTokenizer = new StringTokenizer(line, Constants.DELIMITER);
-            while (stringTokenizer.hasMoreTokens()) {
+            while (stringTokenizer.hasMoreTokens()) {   // Пока есть следующее слово с этой строке
                 String word = stringTokenizer.nextToken();
-                for (String controlEnglishWord : getControlEnglishWords()) {
-                    if (word.equalsIgnoreCase(controlEnglishWord)) {
-                        hitCounter++;
+                for (String controlEnglishWord : getControlEnglishWords()) {    // Получаем поэлементно из проверочной библиотеки слов
+                    if (word.equalsIgnoreCase(controlEnglishWord)) {    // Проверяем слово из расшифрованной строки на совпадение из проверочной библиотеки
+                        hitCounter++;   // Если есть, то прибавляем счётчик совпадений
                         break;
                     }
                 }
             }
-            if (hitCounter > countWords) {
-                result = line;
-                System.out.println(result + " " + countWords);
+            System.out.println("hitCounter: " + hitCounter);
+            if (hitCounter > countWords) {  // Если счётчик совпадений больше счётчика больше количества слов в строке делённых на 3
+                result = line;  // Значит расшифрованная строка скорее всего найдена
+                System.out.println("СРАБОТАЛО!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("result line: " + result + " hitCounter: " + hitCounter + " countWords: " + countWords);
             }
             hitCounter = 0;
         }
@@ -40,9 +42,8 @@ public class AnalyzeText {
     }
 
     private static int separateWords(String line) {
-        StringTokenizer stringTokenizer = new StringTokenizer(line, Constants.DELIMITER);
-        int countWords = stringTokenizer.countTokens();
-//        System.out.println(countWords / 2);
-        return countWords / 2;
+        StringTokenizer st = new StringTokenizer(line, Constants.DELIMITER);
+        int countWords = st.countTokens();
+        return countWords / 3;
     }
 }
