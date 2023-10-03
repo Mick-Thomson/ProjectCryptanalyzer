@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class FileOperations {
         try {
             Path filePath = Path.of(filename);
             return Files.readAllLines(filePath);
-        } catch (IOException e) {
+        } catch (IOException | InvalidPathException e) {
             throw new FileProcessingException(e.getMessage(), e);
         }
     }
@@ -48,7 +49,7 @@ public class FileOperations {
         try {
             Path filePath = Path.of(fileName);
             Files.writeString(filePath, content, FILE_WRITE_OPTIONS);
-        } catch (IOException e) {
+        } catch (IOException | InvalidPathException e) {
             throw new FileProcessingException(e.getMessage(), e);
         }
 /*        try (Path filePath = Path.of(fileName);
