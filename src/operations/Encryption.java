@@ -2,14 +2,8 @@ package operations;
 
 import files.Constants;
 import files.FileOperations;
-import menu.AlphabetSelection;
-import menu.InputValidator;
 
-import java.io.File;
-import java.nio.file.Path;
 import java.util.Scanner;
-
-import static operations.DecryptionKey.decrypt;
 
 public class Encryption {
     private static String defaultText;

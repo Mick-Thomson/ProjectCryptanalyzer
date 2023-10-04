@@ -2,11 +2,9 @@ package operations;
 
 import files.Constants;
 import files.FileOperations;
-import menu.AlphabetSelection;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class DecryptionBruteForce {
     private static int key = 0;
