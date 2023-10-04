@@ -1,6 +1,7 @@
 package operations;
 
 import files.Constants;
+import files.FileOperations;
 import menu.AlphabetSelection;
 
 import java.util.ArrayList;
@@ -10,8 +11,13 @@ import java.util.Scanner;
 public class DecryptionBruteForce {
     private static int key = 0;
     private static char[] selectedAlphabet;
+    protected static String decryptedText;
     char[] encryptedText;
 
+    private static void writeDecryptedTextInFile() {
+        FileOperations write = new FileOperations();
+        write.writeToFile(Constants.FILE_DECRYPTION_TEXT, decryptedText);
+    }
     private static List<String> getAllTypesDecryptedTexts(char[] encryption) {  // Создание списка расшифрованного текста по всем возможным ключам
 
         List<String> list = new ArrayList<>();
@@ -46,7 +52,8 @@ public class DecryptionBruteForce {
 //        Scanner scan = new Scanner(System.in);
 //        char[] encryptedText = scan.nextLine().toCharArray();   // Если что, вернуть назад char[] encryptedText = scan.nextLine().toCharArray();
         List<String> listDecryptionTexts = getAllTypesDecryptedTexts(InputSelection.encryptedTextSymbols);
-        String decryptedText = AnalyzeText.analyzeText(listDecryptionTexts, Constants.FILE_CHECKLIST_OF_ENGLISH_WORDS);
+        decryptedText = AnalyzeText.analyzeText(listDecryptionTexts, Constants.FILE_CHECKLIST_OF_ENGLISH_WORDS);
+        writeDecryptedTextInFile();
         System.out.println("Возможный текст: \n" + decryptedText);
     }
 }
