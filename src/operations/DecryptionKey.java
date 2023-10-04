@@ -40,6 +40,5 @@ public class DecryptionKey {
         writeDecryptedTextInFile();
         System.out.println("Текст расшифрован: ");
         System.out.println(decryptedText);
-        scan.close();
     }
 }

@@ -2,11 +2,13 @@ package files;
 
 public class Constants {
 
-    public static final String FILE_LIST_ENGLISH_WORDS = "C:\\Users\\Mechanical Dildo\\IdeaProjects\\JavaRush\\src\\Cesar\\ListEnglishWords";
-    public static final String FILE_ORIGINAL_TEXT = "src/files/OriginalText";
-    public static final String FILE_ENCRYPTION_TEXT = "src/files/EncryptedText";    // fileStorage/
-    public static final String FILE_DECRYPTION_TEXT = "C:\\Users\\Mechanical Dildo\\IdeaProjects\\ProjectCryptanalyzer\\src\\files\\DecryptedText";
-    public static final String FILE_CURRENT_KEY = "src/files/CurrentKey";
+//    public static final String FILE_NAME = "file.txt";
+//    public static final String FILE_LIST_ENGLISH_WORDS = "src/files/fileStorage/ListEnglishWords";
+    public static final String FILE_CHECKLIST_OF_ENGLISH_WORDS = "src/files/fileStorage/checklistOfEnglishWords";
+    public static final String FILE_ORIGINAL_TEXT = "src/files/fileStorage/OriginalText";
+    public static final String FILE_ENCRYPTION_TEXT = "src/files/fileStorage/EncryptedText";    // fileStorage/
+    public static final String FILE_DECRYPTION_TEXT = "src/files/fileStorage/DecryptedText";
+    public static final String FILE_CURRENT_KEY = "src/files/fileStorage/CurrentKey";
     public static final String DELIMITER = ".,«»\"':!?\n ";
 
     public static final char[] ENGLISH_ALPHABET = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',

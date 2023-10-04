@@ -1,8 +1,6 @@
 package files;
 
 import files.exceptions.FileProcessingException;
-import operations.AnalyzeText;
-import operations.DecryptionBruteForce;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,6 +17,17 @@ public class FileOperations {
     private static final List<String> controlEnglishWords = new ArrayList<>();
     private static final StandardOpenOption[] FILE_WRITE_OPTIONS =
             {StandardOpenOption.CREATE, StandardOpenOption.APPEND};
+    public static String fileCreator(String filename) {
+        try {
+            Path path = Path.of(filename);
+            if (!Files.exists(path)) {
+                Files.createFile(path);
+            }
+        } catch (IOException | InvalidPathException e) {
+            throw new FileProcessingException(e.getMessage(), e);
+        }
+        return filename;
+    }
     public List<String> readFile(String filename) {
         try {
             Path filePath = Path.of(filename);

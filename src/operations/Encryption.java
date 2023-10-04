@@ -16,13 +16,13 @@ public class Encryption {
     private static int key;
     protected static String encryptedText;
     private static void writeOriginalTextInFile() {
-//        File file = new File("Origin");
-//        Path path = Path.of("Origin");
         Scanner scanText = new Scanner(System.in);
         defaultText = scanText.nextLine();
         FileOperations write = new FileOperations();
-//        write.writeToFile("Origin", defaultText);
+//        FileOperations.fileCreator(Constants.FILE_NAME);
+//        write.appendToFile(FileOperations.fileCreator(Constants.FILE_NAME), defaultText);
         write.writeToFile(Constants.FILE_ORIGINAL_TEXT, defaultText);
+//        write.writeToFile(Constants.FILE_NAME, defaultText);
     }
     private static void writeEncryptedTextInFile() {
         FileOperations write = new FileOperations();
