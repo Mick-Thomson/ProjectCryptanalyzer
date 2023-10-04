@@ -31,6 +31,7 @@ public class DecryptionKey {
         return cipher;
     }
     public static void decrypt() {
+        System.out.println("Decrypting text using a key:");
         char[] selectedAlphabet = AlphabetSelection.alphabetSelection();
         System.out.println("Введите текст, который хотите расшифровать: ");
         Scanner scan = new Scanner(System.in);

@@ -63,6 +63,7 @@ public class Encryption {
         }
     }
     public static void encrypt() {
+        System.out.println("Encryption:");
         char[] selectedAlphabet = AlphabetSelection.alphabetSelection();
         System.out.println("Введите текст, который хотите зашифровать: ");
         writeOriginalTextInFile();

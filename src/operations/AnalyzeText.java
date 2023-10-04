@@ -2,16 +2,10 @@ package operations;
 
 import files.Constants;
 import files.FileOperations;
-
-import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import static files.FileOperations.getControlEnglishWords;
-
-
 public class AnalyzeText {
-
     public static String analyzeText(List<String> list, String fileVerificationSource) {
         String result = "Не найдено совпадений!";
         int hitCounter = 0;
@@ -32,7 +26,7 @@ public class AnalyzeText {
                 }
             }
 //            System.out.println("hitCounter: " + hitCounter);
-            if (hitCounter > countWords) {  // Если счётчик совпадений больше счётчика больше количества слов в строке делённых на 3
+            if (hitCounter > countWords) {  // Если счётчик совпадений больше счётчика количества слов в строке делённых на 3
                 result = line;  // Значит расшифрованная строка скорее всего найдена
                 System.out.println("Возможный ключ: " + keyCounter);
 //                System.out.println("result line: " + result + " hitCounter: " + hitCounter + " countWords: " + countWords);
@@ -42,7 +36,6 @@ public class AnalyzeText {
         }
         return result;
     }
-
     private static int separateWords(String line) {
         StringTokenizer st = new StringTokenizer(line, Constants.DELIMITER);
         int countWords = st.countTokens();
