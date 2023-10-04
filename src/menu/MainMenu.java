@@ -25,23 +25,17 @@ public class MainMenu {
             System.out.print("1. Encryption \n");
             System.out.print("2. Decryption (Key) \n");
             System.out.print("3. Decryption (Brute Force) \n");
-//            System.out.print("4. Decryption (Statistical Analysis). \n");
             System.out.print("0. Exit \n");
             choice = inputValidator.validateChoice(inputScanner);
             switch (choice) {
                 case 1 -> encrypt();
                 case 2 -> decrypt();
                 case 3 -> decryptBF();
-//                case 4 -> {
-//                    System.out.println("Decrypting using statistical text analysis");
-//                }
                 case 0 -> {
                     System.out.println("Exiting program!");
                     System.exit(0);
                 }
-                default -> {
-                    System.out.println("This is a not valid value");
-                }
+                default -> System.out.println("This is a not valid value");
             }
         }
     }

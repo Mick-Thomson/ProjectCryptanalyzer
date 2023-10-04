@@ -2,7 +2,6 @@ package operations;
 
 import files.Constants;
 import files.FileOperations;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,8 +9,6 @@ public class DecryptionBruteForce {
     private static int key = 0;
     private static char[] selectedAlphabet;
     protected static String decryptedText;
-    char[] encryptedText;
-
     private static void writeDecryptedTextInFile() {
         FileOperations write = new FileOperations();
         write.writeToFile(Constants.FILE_DECRYPTION_TEXT, decryptedText);
