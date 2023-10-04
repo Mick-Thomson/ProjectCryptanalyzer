@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class DecryptionBruteForce {
     private static int key = 0;
     private static char[] selectedAlphabet;
+    char[] encryptedText;
 
     private static List<String> getAllTypesDecryptedTexts(char[] encryption) {  // Создание списка расшифрованного текста по всем возможным ключам
 
@@ -40,10 +41,11 @@ public class DecryptionBruteForce {
     public static void decryptBF() {
         System.out.println("Decrypting text using Brute Force:");
         selectedAlphabet = AlphabetSelection.alphabetSelection();
-        System.out.println("Введите текст, который хотите расшифровать: ");
-        Scanner scan = new Scanner(System.in);
-        char[] encryptedText = scan.nextLine().toCharArray();
-        List<String> listDecryptionTexts = getAllTypesDecryptedTexts(encryptedText);
+        InputSelection.selectingDataEntryMethodForDecryptionBruteForce();
+//        System.out.println("Введите текст, который хотите расшифровать: ");
+//        Scanner scan = new Scanner(System.in);
+//        char[] encryptedText = scan.nextLine().toCharArray();   // Если что, вернуть назад char[] encryptedText = scan.nextLine().toCharArray();
+        List<String> listDecryptionTexts = getAllTypesDecryptedTexts(InputSelection.encryptedTextSymbols);
         String decryptedText = AnalyzeText.analyzeText(listDecryptionTexts, Constants.FILE_CHECKLIST_OF_ENGLISH_WORDS);
         System.out.println("Возможный текст: \n" + decryptedText);
     }
