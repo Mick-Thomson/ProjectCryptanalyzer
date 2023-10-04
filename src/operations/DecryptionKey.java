@@ -34,10 +34,16 @@ public class DecryptionKey {
         System.out.println("Decrypting text using a key:");
         char[] selectedAlphabet = AlphabetSelection.alphabetSelection();
         System.out.println("Введите текст, который хотите расшифровать: ");
-        Scanner scan = new Scanner(System.in);
-        char[] decryptedTextSymbols = scan.nextLine().toCharArray();
+//        Scanner scan = new Scanner(System.in);
+        // Вводим текст
+        FileOperations readEncryptionFile = new FileOperations();
+        char[] decryptedTextSymbols = readEncryptionFile.readFile(Constants.FILE_ENCRYPTION_TEXT).toCharArray();
+        System.out.println("Текст: " + new String(decryptedTextSymbols));
         System.out.println("Введите ключ: ");
-        int key = scan.nextInt();
+        // Вводим ключ
+        FileOperations readCurrentKeyFile = new FileOperations();
+        int key = Integer.parseInt(readCurrentKeyFile.readFile(Constants.FILE_CURRENT_KEY));
+        System.out.println("Ключ: " + key);
         decryptedText = new String(decryptionKey(decryptedTextSymbols, key, selectedAlphabet));
         writeDecryptedTextInFile();
         System.out.println("Текст расшифрован: ");

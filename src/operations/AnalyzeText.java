@@ -12,7 +12,7 @@ public class AnalyzeText {
         int keyCounter = 0;
         StringTokenizer stringTokenizer;
         FileOperations readFile = new FileOperations();
-        readFile.readFromFile(fileVerificationSource);  // Читаем из проверочного файла
+        readFile.readFromFileForAnalyze(fileVerificationSource);  // Читаем из проверочного файла
         for (String line : list) {  // Проходимся по списку всех расшифровок построчно
             int countWords = separateWords(line);   // Возвращаем количество слов в каждой строке разделённое на 3
             stringTokenizer = new StringTokenizer(line, Constants.DELIMITER);
