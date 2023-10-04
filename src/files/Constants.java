@@ -1,10 +1,7 @@
 package files;
 
 public class Constants {
-
-//    public static final String FILE_NAME = "file.txt";
-//    public static final String FILE_LIST_ENGLISH_WORDS = "src/files/fileStorage/ListEnglishWords";
-    public static final String FILE_CHECKLIST_OF_ENGLISH_WORDS = "src/files/fileStorage/checklistOfEnglishWords";
+    public static final String FILE_CHECKLIST_OF_ENGLISH_WORDS = "src/files/fileStorage/ChecklistOfEnglishWords";
     public static final String FILE_ORIGINAL_TEXT = "src/files/fileStorage/OriginalText";
     public static final String FILE_ENCRYPTION_TEXT = "src/files/fileStorage/EncryptedText";    // fileStorage/
     public static final String FILE_DECRYPTION_TEXT = "src/files/fileStorage/DecryptedText";
