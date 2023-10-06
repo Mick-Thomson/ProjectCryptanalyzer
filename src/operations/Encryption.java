@@ -13,14 +13,7 @@ public class Encryption {
         Scanner scanText = new Scanner(System.in);
         defaultText = scanText.nextLine();
         FileOperations originalText = new FileOperations();
-
-//        FileOperations.fileCreator(Constants.FILE_NAME);
-//        write.appendToFile(FileOperations.fileCreator(Constants.FILE_NAME), defaultText);
-
-//        originalText.writeToFile(Constants.FILE_ORIGINAL_TEXT, defaultText);
-
         originalText.writeToFile(originalText.fileCreator(Constants.FILE_ORIGINAL_TEXT), defaultText);
-//        write.writeToFile(Constants.FILE_NAME, defaultText);
     }
     private static void writeEncryptedTextInFile() {
         FileOperations write = new FileOperations();

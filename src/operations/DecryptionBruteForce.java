@@ -43,9 +43,6 @@ public class DecryptionBruteForce {
         System.out.println("Decrypting text using Brute Force:");
         selectedAlphabet = AlphabetSelection.alphabetSelection();
         InputSelection.selectingDataEntryMethodForDecryptionBruteForce();
-//        System.out.println("Введите текст, который хотите расшифровать: ");
-//        Scanner scan = new Scanner(System.in);
-//        char[] encryptedText = scan.nextLine().toCharArray();   // Если что, вернуть назад char[] encryptedText = scan.nextLine().toCharArray();
         List<String> listDecryptionTexts = getAllTypesDecryptedTexts(InputSelection.encryptedTextSymbols);
         decryptedText = AnalyzeText.analyzeText(listDecryptionTexts, Constants.FILE_CHECKLIST_OF_ENGLISH_WORDS);
         writeDecryptedTextInFile();

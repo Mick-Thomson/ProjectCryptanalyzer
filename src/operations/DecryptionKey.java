@@ -10,7 +10,6 @@ public class DecryptionKey {
         FileOperations write = new FileOperations();
         write.writeToFile(Constants.FILE_DECRYPTION_TEXT, decryptedText);
     }
-
     private static char[] decryptionKey(char[] str, int key, char[] alphabet) {
         char[] cipher = new char[str.length];
         for (int i = 0; i < str.length; i++) {
@@ -32,17 +31,6 @@ public class DecryptionKey {
         System.out.println("Decrypting text using a key:");
         char[] selectedAlphabet = AlphabetSelection.alphabetSelection();
         InputSelection.selectingDataEntryMethodForDecryptionKey();
-//        System.out.println("Введите текст, который хотите расшифровать: ");
-////        Scanner scan = new Scanner(System.in);
-//        // Вводим текст
-//        FileOperations readEncryptionFile = new FileOperations();
-//        decryptedTextSymbols = readEncryptionFile.readFile(Constants.FILE_ENCRYPTION_TEXT).toCharArray();    // Если что, вернуть назад char[] decryptedTextSymbols = readEncryptionFile.readFile(Constants.FILE_ENCRYPTION_TEXT).toCharArray();
-//        System.out.println("Текст: " + new String(decryptedTextSymbols));
-//        System.out.println("Введите ключ: ");
-//        // Вводим ключ
-//        FileOperations readCurrentKeyFile = new FileOperations();
-//        key = Integer.parseInt(readCurrentKeyFile.readFile(Constants.FILE_CURRENT_KEY));    // Если что, вернуть назад int key = Integer.parseInt(readCurrentKeyFile.readFile(Constants.FILE_CURRENT_KEY));
-//        System.out.println("Ключ: " + key);
         decryptedText = new String(decryptionKey(InputSelection.encryptedTextSymbols, InputSelection.key, selectedAlphabet));
         writeDecryptedTextInFile();
         System.out.println("Текст расшифрован: ");

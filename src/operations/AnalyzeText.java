@@ -25,11 +25,9 @@ public class AnalyzeText {
                     }
                 }
             }
-//            System.out.println("hitCounter: " + hitCounter);
             if (hitCounter > countWords) {  // Если счётчик совпадений больше счётчика количества слов в строке делённых на 3
                 result = line;  // Значит расшифрованная строка скорее всего найдена
                 System.out.println("Возможный ключ: " + keyCounter);
-//                System.out.println("result line: " + result + " hitCounter: " + hitCounter + " countWords: " + countWords);
             }
             hitCounter = 0;
             keyCounter++;

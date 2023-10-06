@@ -47,27 +47,6 @@ public class FileOperations {
             System.err.println("File not found!");
         }
     }
-/*    public void writeToFile(String filePathName, String content) {
-        try (FileWriter writer = new FileWriter(filePathName)) {
-            writer.write(content);
-        } catch (IOException e) {
-            throw new FileProcessingException(e.getMessage(), e);
-        }
-    }*/
-//    public void appendToFile(String fileName, String content) {
-//        try {
-//            Path filePath = Path.of(fileName);
-//            Files.writeString(filePath, content, FILE_WRITE_OPTIONS);
-//        } catch (IOException | InvalidPathException e) {
-//            throw new FileProcessingException(e.getMessage(), e);
-//        }
-///*        try (Path filePath = Path.of(fileName);
-//             FileWriter writer = new FileWriter(fileName, true)) {
-//            writer.write(content);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }*/
-//    }
     public void appendToFile(String fileName, String content) {
         try {
             Path filePath = Path.of(fileName);
@@ -76,12 +55,6 @@ public class FileOperations {
         } catch (IOException | InvalidPathException e) {
             throw new FileProcessingException(e.getMessage(), e);
         }
-/*        try (Path filePath = Path.of(fileName);
-             FileWriter writer = new FileWriter(fileName, true)) {
-            writer.write(content);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
     }
     public void writeToFile(String fileName, String content) {
         try {

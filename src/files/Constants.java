@@ -3,7 +3,7 @@ package files;
 public class Constants {
     public static final String FILE_CHECKLIST_OF_ENGLISH_WORDS = "src/files/fileStorage/ChecklistOfEnglishWords.txt";
     public static final String FILE_ORIGINAL_TEXT = "src/files/fileStorage/OriginalText.txt";
-    public static final String FILE_ENCRYPTION_TEXT = "src/files/fileStorage/EncryptedText.txt";    // fileStorage/
+    public static final String FILE_ENCRYPTION_TEXT = "src/files/fileStorage/EncryptedText.txt";
     public static final String FILE_DECRYPTION_TEXT = "src/files/fileStorage/DecryptedText.txt";
     public static final String FILE_CURRENT_KEY = "src/files/fileStorage/CurrentKey.txt";
     public static final String DELIMITER = ".,«»\"':!?\n ";

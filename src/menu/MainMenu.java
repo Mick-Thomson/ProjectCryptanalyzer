@@ -15,7 +15,6 @@ import static operations.Encryption.encrypt;
 
 public class MainMenu {
     public void start() {
-//        fileCreator(Constants.FILE_NAME);
         InputValidator inputValidator = new InputValidator();
         Scanner inputScanner = new Scanner(System.in);
         int choice;
